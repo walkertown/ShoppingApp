@@ -1,17 +1,15 @@
 pipeline {
   
-    agent {
-        label 'Java-Node'
-    }
+    agent any
     
     tools{
-        maven "Maven-3.9.6"
+        maven "Maven 3.9.6"
     }
 
     stages {
         stage('Clone') {
             steps {
-               git 'https://github.com/walkertown/ShoppingApp.git'
+               git branch: 'develop', url: 'https://github.com/walkertown/ShoppingApp.git'
             }
         }
         stage('Build') {
