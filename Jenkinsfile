@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-               git branch: 'develop', url: 'https://github.com/walkertown/ShoppingApp.git'
+               git branch: 'main', url: 'https://github.com/walkertown/ShoppingApp.git'
             }
         }
         stage('Build') {
